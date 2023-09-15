@@ -452,7 +452,7 @@ About
   height: 50vh;
   justify-content: space-between;
   align-items: center;
-  background-color: #95827d;
+  background-color: #ff9770;
 }
 .about-center {
   height: calc(100vh - 10rem);
