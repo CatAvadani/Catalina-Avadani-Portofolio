@@ -16,8 +16,26 @@ Variables
   --border-radius: 8px;
   --transition: all 0.3s ease-in-out;
   --letter-spacing: 0.2rem;
+  /* Light mode  */
+  --dark-mode-color: #1d1918;
+  --dark-mode-seconday-color: #302a28;
+  --bg-color: var(--color-primary-1);
+  --nav-color: var(--color-primary-1);
+  --span-color: var(--color-primary-dark);
+  --bg-projects: var(--color-primary-2);
+  --contact-info-bg: var(--color-primary-dark);
 }
 
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: var(--dark-mode-color);
+    --nav-color: var(--dark-mode-color);
+    --span-color: var(--color-secondary-1);
+    --bg-projects: var(--dark-mode-seconday-color);
+    --contact-info-bg: var(--dark-mode-seconday-color);
+  }
+}
 /* Global styles */
 * {
   margin: 0;
@@ -26,7 +44,7 @@ Variables
 }
 
 body {
-  background-color: var(--color-primary-1);
+  background-color: var(--bg-color);
   font-family: "Montserrat", sans-serif;
 }
 
@@ -82,7 +100,7 @@ Navbar
   padding-left: 3rem;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--color-primary-1);
+  background-color: var(--nav-color);
   transition: var(--transition);
   -webkit-transition: var(--transition);
   z-index: 1;
@@ -113,7 +131,7 @@ Navbar
 }
 
 .navigation span {
-  color: var(--color-primary-dark);
+  color: var(--span-color);
 }
 
 /*
@@ -330,7 +348,7 @@ Projects
 .projects {
   padding: 5rem 2rem;
   height: 100%;
-  background-color: var(--color-primary-2);
+  background-color: var(--bg-projects);
 }
 .projects-container {
   display: grid;
@@ -766,13 +784,13 @@ Contact
   padding-bottom: 0.5rem;
 }
 .contact-info {
-  background-color: #2b2524;
+  background-color: var(--contact-info-bg);
   text-align: left;
   padding: 2rem 10rem;
   border-radius: 8px;
 }
 .contact-info p {
-  color: var(--color-primary-light);
+  color: var(--contact-info-color);
   font-weight: 100;
   margin: 1rem 0;
 }
