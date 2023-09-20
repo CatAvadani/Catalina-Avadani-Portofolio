@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     <!-- favicon -->
-    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <link rel="icon" type="image/x-icon" href="/images/myFavicon.ico" />
     <!-- font-awesome -->
     <link
       rel="stylesheet"
@@ -25,7 +25,7 @@
     <!-- Navbar -->
     <div class="navigation">
       <div class="logo">
-        <h1>Catalina<span>Avadani</span></h1>
+        <a href="index.html">Catalina<span>Avadani</span></a>
       </div>
       <!-- Navigation-links -->
       <ul class="nav-links">
@@ -47,7 +47,13 @@
         <input type="text" placeholder="Name" />
         <input type="text" placeholder="Email" />
         <textarea name="text" cols="4" rows="3"></textarea>
-        <button type="submit" class="btn btn-contact">Submit</button>
+        <button
+          type="submit"
+          onclick="alert('Your message has been sent!')"
+          class="btn btn-contact"
+        >
+          Submit
+        </button>
       </div>
     </section>
     <hr />
