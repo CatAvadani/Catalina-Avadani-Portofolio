@@ -3,6 +3,12 @@
 Variables
 ===============
 */
+/*:root selector - selects the root element of the document:
+   <html> in the case of HTML 
+   -useful for declaring global CSS variables
+*/
+/* Variables makes the code easier to read and
+makes it much easier to change the color values */
 :root {
   --color-primary-1: #605350;
   --color-primary-2: #a08b86;
@@ -102,6 +108,7 @@ Navbar
   justify-content: space-between;
   background-color: var(--nav-color);
   transition: var(--transition);
+  /* browser prefix - allows properties to be set specific for each individual browser */
   -webkit-transition: var(--transition);
   z-index: 1;
 }
@@ -141,6 +148,7 @@ Navbar
 Media Query -- navigation
 ===========
 */
+/* setup for smaller screens */
 @media screen and (max-width: 756px) {
   .navigation {
     flex-direction: column;
@@ -164,6 +172,7 @@ Media Query -- navigation
     margin-left: 1.2rem;
   }
 }
+/* setup for medium screens */
 @media screen and (min-width: 756px) and (max-width: 1170px) {
   .navigation {
     position: relative;
@@ -177,7 +186,7 @@ Media Query -- navigation
 
 /*
 ===========
-  Home-page
+Home-page
 ===========
 */
 
@@ -197,8 +206,9 @@ hr {
   align-items: center;
   gap: 5rem;
   position: relative;
+  -webkit-transition: var(--transition);
+  transition: all var(--transition);
 }
-
 .arrow {
   font-size: 3rem;
   color: var(--color-secondary-1);
@@ -289,7 +299,7 @@ hr {
 Media Query -- Home Page
 ===========
 */
-
+/* setup for smaller screens */
 @media screen and (max-width: 756px) {
   .container-center {
     flex-direction: column;
@@ -322,7 +332,7 @@ Media Query -- Home Page
     background-image: none;
   }
 }
-
+/* setup for medium screens */
 @media screen and (min-width: 756px) and (max-width: 1170px) {
   .container-image {
     margin-bottom: 3rem;
@@ -456,10 +466,10 @@ Projects
 }
 /*
 ===========
-  Media Query -- Projects
+Media Query -- Projects
 ===========
 */
-
+/* setup for smaller screens */
 @media screen and (max-width: 756px) {
   .projects-container {
     display: block;
@@ -475,6 +485,7 @@ Projects
     display: none;
   }
 }
+/* setup for medium screens */
 @media screen and (min-width: 756px) and (max-width: 1170px) {
   .projects-container {
     width: 90vw;
@@ -533,7 +544,7 @@ Footer
   font-size: 1.2rem;
 }
 
-/* media icons */
+/* Media Icons */
 .media-icons {
   padding: 2rem;
   font-size: 2rem;
@@ -557,11 +568,13 @@ About
 .about-container {
   display: flex;
   margin: 0 auto;
-  width: 60vw;
+  width: 70vw;
   height: 50vh;
   border-radius: var(--border-radius);
   justify-content: space-between;
   align-items: center;
+  -webkit-transition: var(--transition);
+  transition: all var(--transition);
   /* background: linear-gradient(115deg, #2b2524, #a08b86, #eee3e0); */
   background: linear-gradient(
     115deg,
@@ -603,55 +616,24 @@ About
 .about-info {
   padding-left: 2rem;
   width: 100%;
+  height: 80%;
   text-align: left;
   color: var(--color-primary-dark);
   line-height: 2rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   overflow: auto;
 }
-
-/* .floating-btn {
-  position: absolute;
-  bottom: 4%;
-  animation: bounce 3s ease-in-out infinite;
-} */
-
-/* Travel - photos */
-/* .memory {
-  width: 350px;
-  border-radius: var(--border-radius);
-  position: absolute;
-} */
-/* .photo1 {
-  bottom: 20%;
-  right: 2%;
-  transform: rotate(10deg);
-  z-index: 1;
-} */
-/* .photo2 {
-  top: 15%;
-  left: 5%;
-  transform: rotate(25deg);
-  z-index: -1;
-} */
-/* .photo3 {
-  top: 15%;
-  right: 10%;
-  transform: rotate(20deg);
-  z-index: -1;
-} */
-/* .photo5 {
-  bottom: 15%;
-  left: 2%;
-  transform: rotate(-20deg);
-  z-index: -1;
-} */
+.about-info p {
+  margin-bottom: 1rem;
+  padding-right: 1.5rem;
+}
 
 /*
 ===========
-  Media Query -- About
+Media Query -- About
 ===========
   */
+/* setup for smaller screens */
 @media screen and (max-width: 756px) {
   .about-center {
     height: 100%;
@@ -682,10 +664,8 @@ About
     left: 50%;
     border-top-right-radius: var(--border-radius);
   }
-  /* .memory {
-    display: none;
-  } */
 }
+/* setup for medium screens */
 @media screen and (min-width: 756px) and (max-width: 1170px) {
   .about-container {
     width: 90%;
@@ -694,9 +674,6 @@ About
     height: calc(100vh - 15rem);
     padding-top: 0;
   }
-  /* .memory {
-    display: none;
-  } */
 }
 /*
 ===========
@@ -735,7 +712,6 @@ Portofolio
 .project-card a {
   font-size: 2rem;
   color: var(--color-primary-light);
-  /* browser prefix - allows properties to be set specific for each individual browser */
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
@@ -755,10 +731,10 @@ Portofolio
 }
 /*
 ===========
-  Media Query -- Portofolio
+Media Query -- Portofolio
 ===========
 */
-
+/* setup for smaller screens */
 @media screen and (max-width: 756px) {
   .projects-center {
     margin: 15px;
@@ -784,6 +760,8 @@ Contact
   background-image: url(/images/Artboard4.png);
   background-repeat: no-repeat;
   background-position: center;
+  -webkit-transition: var(--transition);
+  transition: all var(--transition);
 }
 .section-center h2 {
   font-weight: 100;
@@ -821,18 +799,15 @@ Contact
   background-color: transparent;
   color: var(--color-primary-dark);
 }
-input::placeholder {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 100;
-  font-size: 1.2rem;
-  color: var(--color-primary-dark);
-}
+
 .contact-form {
   max-width: 500px;
   background-color: var(--color-secondary-1);
-  height: 90%;
+  height: 85%;
   padding: 2rem;
   margin-top: 4rem;
+  border-radius: var(--border-radius);
+  /* Css clip-path maker */
   clip-path: polygon(
     0% 0%,
     100% 0%,
@@ -864,15 +839,19 @@ input {
   padding: 1rem 2rem;
   cursor: pointer;
   font-size: 1.2rem;
-  -webkit-transition: var(--transition);
-  transition: all var(--transition);
 }
-
+input::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  font-size: 1.2rem;
+  color: var(--color-primary-dark);
+}
 /*
 ===========
 Media Query -- Contact
 ===========
 */
+/* setup for smaller screens */
 @media screen and (max-width: 756px) {
   .section-center {
     display: block;
@@ -882,22 +861,24 @@ Media Query -- Contact
   }
   .contact-info {
     text-align: center;
-    padding: 4rem;
+    padding: 2rem 4rem;
     margin: 2rem;
   }
   .contact-form {
     margin: 5rem auto;
-    border-radius: var(--border-radius);
     clip-path: none;
   }
 }
-
+/* setup for medium screens */
 @media screen and (min-width: 756px) and (max-width: 1170px) {
   .contact-info {
-    padding: 2rem;
     margin: 1rem;
+    padding: 1rem 2rem;
   }
   .section-center {
     width: 90%;
+  }
+  .contact-form {
+    height: 75%;
   }
 }
