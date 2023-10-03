@@ -592,14 +592,16 @@ About
   position: relative;
 }
 .about-photo {
-  background-image: url(/images/catalina1.jpg);
-  background-position: center;
-  background-size: cover;
   color: var(--color-primary-dark);
   width: 30%;
   height: 100%;
   border-top-left-radius: var(--border-radius);
   border-bottom-left-radius: var(--border-radius);
+}
+.about-photo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 .about-block {
   display: flex;
@@ -749,12 +751,13 @@ Contact
 ===========
 */
 .section-center {
-  height: calc(100vh - 12rem);
+  height: calc(100vh - 15rem);
   width: 100vw;
   display: grid;
   place-items: center;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  margin-top: 5rem;
   color: var(--color-primary-light);
   text-align: center;
   background-image: url(/images/Artboard4.png);
@@ -792,7 +795,7 @@ Contact
   border: 2px solid var(--color-primary-dark);
   background-color: var(--color-primary-dark);
   color: var(--color-secondary-1);
-  margin-top: 0.5rem;
+  margin: 0.5rem auto;
   padding: 0.5rem 2rem;
 }
 .btn-contact:hover {
@@ -803,7 +806,7 @@ Contact
 .contact-form {
   max-width: 500px;
   background-color: var(--color-secondary-1);
-  height: 85%;
+  height: 90%;
   padding: 2rem;
   margin-top: 4rem;
   border-radius: var(--border-radius);
