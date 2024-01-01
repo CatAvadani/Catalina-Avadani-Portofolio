@@ -331,7 +331,7 @@ Media Query -- Home Page
   .nav-links a {
     font-size: 1.5rem;
   }
-  
+
   .home-page {
     background-image: none;
   }
@@ -695,17 +695,15 @@ Media Query -- About
     left: 50%;
     
   } */
-  width: 30%;
-  height: 50vh;
-  position: absolute;
-  top: 5rem;
-  left: 65%;
+    width: 30%;
+    height: 50vh;
+    position: absolute;
+    top: 5rem;
+    left: 65%;
     border-top-right-radius: var(--border-radius);
-    border-top-right-radius: var(--border-radius);
-  }
-  border-top-right-radius: var(--border-radius);
   }
 }
+
 /* setup for medium screens */
 @media screen and (min-width: 756px) and (max-width: 1170px) {
   .about-container {
